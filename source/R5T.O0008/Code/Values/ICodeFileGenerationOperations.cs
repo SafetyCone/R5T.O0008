@@ -46,6 +46,15 @@ namespace R5T.O0008
                 projectDescription.Value);
         }
 
+        public async Task Create_ExampleComponentRazorFile(
+            IRazorFilePath razorFilePath,
+            INamespaceName namespaceName)
+        {
+            await Instances.CodeFileGenerationOperations_F0083.CreateExampleComponentRazorFile(
+                razorFilePath.Value,
+                namespaceName.Value);
+        }
+
         public Task Create_ImportsRazorFile_WebBlazorClient_Main(
             IRazorFilePath razorFilePath,
             INamespaceName projectNamespaceName)
@@ -53,6 +62,13 @@ namespace R5T.O0008
             return Instances.CodeFileGenerationOperations_F0083.CreateImportsRazorFile_WebBlazorClient_Main(
                 razorFilePath.Value,
                 projectNamespaceName.Value);
+        }
+
+        public Task Create_PlaceholderHtmlFile(
+            IHtmlFilePath htmlFilePath)
+        {
+            return Instances.TextFileGenerator_F0054.Create_PlaceholderHtmlFile(
+                htmlFilePath.Value);
         }
 
         public Task Create_IndexHtmlFile(
