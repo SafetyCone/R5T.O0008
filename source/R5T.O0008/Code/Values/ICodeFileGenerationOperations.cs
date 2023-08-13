@@ -55,11 +55,38 @@ namespace R5T.O0008
                 namespaceName.Value);
         }
 
+        public Task Create_ImportsRazorFile_WebBlazorClient_Components(
+            IRazorFilePath razorFilePath,
+            INamespaceName projectNamespaceName)
+        {
+            return Instances.CodeFileGenerationOperations_F0083.CreateImportsRazorFile_WebBlazorClient_Components(
+                razorFilePath.Value,
+                projectNamespaceName.Value);
+        }
+
+        public Task Create_ImportsRazorFile_WebBlazorClient_ComponentsLayouts(
+            IRazorFilePath razorFilePath,
+            INamespaceName projectNamespaceName)
+        {
+            return Instances.CodeFileGenerationOperations_F0083.CreateImportsRazorFile_WebBlazorClient_ComponentsLayouts(
+                razorFilePath.Value,
+                projectNamespaceName.Value);
+        }
+
         public Task Create_ImportsRazorFile_WebBlazorClient_Main(
             IRazorFilePath razorFilePath,
             INamespaceName projectNamespaceName)
         {
             return Instances.CodeFileGenerationOperations_F0083.CreateImportsRazorFile_WebBlazorClient_Main(
+                razorFilePath.Value,
+                projectNamespaceName.Value);
+        }
+
+        public Task Create_ImportsRazorFile_WebBlazorClient_Pages(
+            IRazorFilePath razorFilePath,
+            INamespaceName projectNamespaceName)
+        {
+            return Instances.CodeFileGenerationOperations_F0083.CreateImportsRazorFile_WebBlazorClient_Pages(
                 razorFilePath.Value,
                 projectNamespaceName.Value);
         }
@@ -80,11 +107,22 @@ namespace R5T.O0008
                 pageTitle);
         }
 
+        public Task Create_IndexHtmlFile_WebBlazorClient(
+            IHtmlFilePath htmlFilePath,
+            string pageTitle)
+        {
+            return Instances.CodeFileGenerationOperations_F0083.CreateIndexHtmlFile_WebBlazorClient(
+                htmlFilePath.Value,
+                pageTitle);
+        }
+
         public Task Create_IndexRazorFile_WebBlazorClient(
-            IRazorFilePath appRazorFilePath)
+            IRazorFilePath appRazorFilePath,
+            INamespaceName projectNamespaceName)
         {
             return Instances.CodeFileGenerationOperations_F0083.CreateIndexRazorFile_WebBlazorClient(
-                appRazorFilePath.Value);
+                appRazorFilePath.Value,
+                projectNamespaceName.Value);
         }
 
         public void Create_InstancesFile(
@@ -110,6 +148,22 @@ namespace R5T.O0008
             INamespaceName projectNamespaceName)
         {
             return Instances.CodeFileGenerationOperations_F0083.CreateMainLayoutRazorFile_WebBlazorClient(
+                layoutRazorFilePath.Value,
+                projectNamespaceName.Value);
+        }
+
+        public Task Create_ComponentsLayoutsLayoutRazorFile_WebBlazorClient(
+            IRazorFilePath layoutRazorFilePath)
+        {
+            return Instances.CodeFileGenerationOperations_F0083.Create_ComponentsLayoutsLayoutRazorFile_WebBlazorClient(
+                layoutRazorFilePath.Value);
+        }
+
+        public Task Create_ComponentsLayoutsLayoutCodeFile_WebBlazorClient(
+            IRazorFilePath layoutRazorFilePath,
+            INamespaceName projectNamespaceName)
+        {
+            return Instances.CodeFileGenerationOperations_F0083.Create_ComponentsLayoutsLayoutCodeFile_WebBlazorClient(
                 layoutRazorFilePath.Value,
                 projectNamespaceName.Value);
         }
