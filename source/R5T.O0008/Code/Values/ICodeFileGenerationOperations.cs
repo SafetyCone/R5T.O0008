@@ -40,7 +40,7 @@ namespace R5T.O0008
             IProjectDescription projectDescription,
             INamespaceName namespaceName)
         {
-            await Instances.CodeFileGenerationOperations_F0083.CreateDocumentationFile(
+            await Instances.CodeFileGenerationOperations_F0083.Create_DocumentationFile(
                 csFilePath.Value,
                 namespaceName.Value,
                 projectDescription.Value);
